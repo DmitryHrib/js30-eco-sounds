@@ -1,0 +1,198 @@
+/* merriweather-regular - latin */
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/merriweather-v28-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/merriweather-v28-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* merriweather-700 - latin */
+  @font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/merriweather-v28-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/merriweather-v28-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-regular - latin */
+@font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/inter-v7-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v7-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* inter-700 - latin */
+  @font-face {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/inter-v7-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/inter-v7-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+html {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+*, *::before, ::after {
+    box-sizing: border-box;
+  }
+body {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 1.2;
+    color: black;
+}
+/* Header styles start */ 
+.header {
+    width: 100%;
+    height: 60px;
+    background-color: black;
+    margin: 0 auto;
+}
+.header-container {
+    width: calc(100% - 30px);
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 5px 40px;
+}
+.header-logo-pic {
+    width: 50px;
+    height: 50px;
+    -webkit-transition: -webkit-transform .8s ease-in-out;
+    transition: transform .8s ease-in-out; 
+}
+.header-logo-pic:hover {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)  contrast(87%);    
+}
+.header-nav {
+    margin-left: auto;
+}
+.header-items {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 40px; 
+   align-items: center;
+}
+.header-item {
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 50px;
+    color: white;
+    cursor: pointer;
+    transition: 1s;    
+}
+.header-item:hover {
+    color: #BDAE82;
+}
+.header-item:focus, .header-item:active {
+    color: #BDAE82;
+}
+.header-itemH:hover {
+    transition: 1s;
+    box-shadow: 0 0.5em 0.5em -0.4em #ffa260;
+    transform: translatey(-0.65em); 
+}
+.active {
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)  contrast(87%);    
+}
+ .active:hover {
+    filter: none;    
+}
+/* Header styles end */
+/* Main styles start */
+main {
+    height: 817px;
+}
+.cover {
+    position: relative;    
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.cover__img {    
+    width: 100%;
+    height: calc(100vh - 120px);    
+}
+.buttons {
+    top: 0;
+    left: 0;
+    position: absolute;  
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.img__src {
+    cursor: pointer;
+    width: 150px;
+    height: 150px;
+}
+.img__src:hover {
+    filter: brightness(.85);
+    transition: 1s;  
+}
+/* Main styles end */
+/* Footer styles start */
+.footer {
+    background-color: black;
+}
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: calc(100% - 30px);
+    max-width: 1440px;
+    margin: 0 auto;
+    color: white;
+    padding: 5px 40px;
+}
+.footer-number {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    font-family: Inter;
+    font-style: normal;
+    font-weight: normal;
+}
+.footer-git:hover {
+    transform: scale(1.2);
+    transition: 1s;
+}
+.footer-git-text {
+    color: white;
+    text-decoration: none;
+}
+.footer-git-text:hover {
+    transform: scale(1.2);
+    transition: 1s;
+    color: #BDAE82;  
+}
+.footer-rss {
+    width: 135px;
+    height: 50px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-image: url(../img/svg/rss.svg);
+}
+.footer-rss:hover {
+    transform: scale(1.2);
+    transition: 1s;
+    filter: invert(26%) sepia(15%) saturate(638%) hue-rotate(7deg) brightness(92%)  contrast(87%);
+}
+/* Footer styles end */
