@@ -172,7 +172,7 @@ main {
 }
 .footer-git:hover {
     transform: scale(1.2);
-    transition: 1s;
+    transition: 0.9s;
 }
 .footer-git-text {
     color: white;
